@@ -15,7 +15,7 @@ export default function Home() {
 
         <FloatingIcons />
 
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-pink-500 blur-[200px] opacity-30 pointer-events-none"></div>
+        <div className="absolute top-0 right-0   bg-pink-500 blur-[200px] opacity-30 pointer-events-none"></div>
 
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600 blur-[200px] opacity-30 pointer-events-none"></div>
 
