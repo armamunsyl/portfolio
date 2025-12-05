@@ -37,7 +37,8 @@ export default function Navbar() {
           <Link href="#contact" className="hover:text-pink-500 transition">Contact</Link>
 
           <a
-            href="/cv.pdf"
+            href="/Abdur_Rahman_Mamun_Resume.pdf"
+            target="_blank"
             className="
               px-4 py-2 rounded-full text-white
               bg-gradient-to-r from-pink-500 to-purple-600
@@ -68,7 +69,8 @@ export default function Navbar() {
           <Link href="#contact" onClick={() => setOpen(false)} className="block hover:text-pink-400">Contact</Link>
 
           <a
-            href="/cv.pdf"
+            href="/Abdur_Rahman_Mamun_Resume.pdf"
+            target="_blank"
             onClick={() => setOpen(false)}
             className="
               block px-4 py-2 mt-2 rounded-full text-white

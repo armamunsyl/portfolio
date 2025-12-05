@@ -35,7 +35,7 @@ export default function ContactSection() {
 
             <div>
               <h3 className="text-lg font-semibold mb-1">Phone</h3>
-              <p className="opacity-70">+880 1700 000 000</p>
+              <p className="opacity-70">+880 01704567244</p>
             </div>
 
             <div>
@@ -46,9 +46,8 @@ export default function ContactSection() {
             <div>
               <h3 className="text-lg font-semibold mb-1">Social</h3>
               <div className="flex gap-3 mt-1 text-sm">
-                <a href="#" className="hover:text-pink-500 transition">Facebook</a>
-                <a href="#" className="hover:text-pink-500 transition">GitHub</a>
-                <a href="#" className="hover:text-pink-500 transition">LinkedIn</a>
+                <a href="https://github.com/armamunsyl" className="hover:text-pink-500 transition">GitHub</a>
+                <a href="https://www.linkedin.com/in/armamunsyl/" className="hover:text-pink-500 transition">LinkedIn</a>
               </div>
             </div>
 

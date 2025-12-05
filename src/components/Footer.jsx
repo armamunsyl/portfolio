@@ -41,14 +41,7 @@ export default function Footer() {
             GitHub
           </a>
           <a
-            href="https://www.facebook.com/armamunsyl"
-            target="_blank"
-            className="hover:text-pink-500 transition"
-          >
-            Facebook
-          </a>
-          <a
-            href="mailto:you@example.com"
+            href="armamunsyl@gmail.com"
             className="hover:text-pink-500 transition"
           >
             Email
