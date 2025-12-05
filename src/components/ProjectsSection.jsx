@@ -46,9 +46,9 @@ export default function ProjectsSection() {
         <div className="snap-center flex-shrink-0 w-full md:w-auto">
           <GlassProjectCard
             images={[
-              "/projects/g1.png",
-              "/projects/g2.png",
-              "/projects/g3.png"
+              "/projects/21.png",
+              "/projects/22.png",
+              "/projects/23.png"
             ]}
             title="GadgateShop"
             description="A modern Next.js e-commerce platform designed with clean UI and smooth UX."
@@ -65,28 +65,7 @@ export default function ProjectsSection() {
           />
         </div>
 
-        <div className="snap-center flex-shrink-0 w-full md:w-auto">
-          <GlassProjectCard
-            images={[
-              "/projects/replizz-login.png",
-              "/projects/replizz-dashboard.png",
-              "/projects/replizz-flow.png"
-            ]}
-            title="Replizz Automation"
-            description="A smart Facebook Messenger automation tool powered by n8n workflows."
-            features={[
-              "Messenger automation",
-              "Webhook execution",
-              "Admin dashboard",
-              "Real-time logs & insights"
-            ]}
-            links={{
-              live: "https://replizz-demo.vercel.app/",
-              client: "https://github.com/armamunsyl/replizz-client",
-              server: "https://github.com/armamunsyl/replizz-server"
-            }}
-          />
-        </div>
+        
 
       </div>
     </section>
