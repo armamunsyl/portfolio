@@ -24,7 +24,6 @@ export default function StarsBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
-      {/* Cross Stars */}
       {crossStars.map((pos, i) => (
         <div
           key={"cross-" + i}
@@ -33,7 +32,6 @@ export default function StarsBackground() {
         />
       ))}
 
-      {/* Dot Stars */}
       {dotStars.map((pos, i) => (
         <div
           key={"dot-" + i}
@@ -42,7 +40,6 @@ export default function StarsBackground() {
         />
       ))}
 
-      {/* Square Stars */}
       {squareStars.map((pos, i) => (
         <div
           key={"square-" + i}

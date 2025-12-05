@@ -5,7 +5,6 @@ export default function AboutSection() {
             id="about"
             className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 px-6 py-20 relative"
         >
-            {/* Left Image */}
             <div className="relative">
                 <Image
                     src="/profile5.png"
@@ -15,11 +14,9 @@ export default function AboutSection() {
                     alt="Picture of the author"
                 />
 
-                {/* Glow Highlight */}
                 <div className="absolute inset-0 rounded-xl bg-pink-500 opacity-40 blur-2xl -z-10"></div>
             </div>
 
-            {/* Right Text */}
             <div className="max-w-xl text-center md:text-left">
                 <h2 className="text-4xl font-bold text-white mb-4">
                     About <span className="text-pink-500">Me</span>

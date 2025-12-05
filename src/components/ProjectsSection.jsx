@@ -2,50 +2,89 @@ import GlassProjectCard from "./GlassProjectCard";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 px-6">
+    <section id="projects" className="py-20 px-4 md:px-6">
 
       <h1 className="text-4xl text-white font-bold mb-10 text-center">
         Featured <span className="text-pink-500">Projects</span>
       </h1>
 
-      <div className="flex gap-12 overflow-x-scroll snap-x snap-mandatory pb-10">
+      <div
+        className="
+        flex flex-col
+        md:flex-row
+        md:overflow-x-auto
+        gap-6
+        lg:gap-4
+        snap-y md:snap-x snap-mandatory
+        no-scrollbar
+        "
+      >
 
-        {/* PROJECT 1 */}
-        <div className="snap-center">
-          <GlassProjectCard 
+        <div className="snap-center flex-shrink-0 w-full md:w-auto">
+          <GlassProjectCard
             images={[
-              "/projects/store-home.png",
-              "/projects/store-login.png",
-              "/projects/store-product.png",
-              "/projects/store-dashboard.png"
+              "/projects/11.png",
+              "/projects/12.png",
+              "/projects/13.png"
             ]}
-            title="NeonBytes Store"
-            description="Modern e-commerce UI designed using vibrant neon colors and smooth animations."
+            title="FinEase"
+            description="Personal finance management system built with modern UI and smooth automation."
             features={[
               "Full responsive design",
-              "Live search system",
-              "Wishlist with LocalStorage",
+              "Secure user authentication",
+              "Income & Expense tracking",
               "Advanced filtering"
             ]}
+            links={{
+              live: "https://fineasey.netlify.app/",
+              client: "https://github.com/armamunsyl/Finance-Management-client",
+              server: "https://github.com/armamunsyl/finease-server"
+            }}
           />
         </div>
 
-        {/* PROJECT 2 */}
-        <div className="snap-center">
-          <GlassProjectCard 
+        <div className="snap-center flex-shrink-0 w-full md:w-auto">
+          <GlassProjectCard
             images={[
-              "/projects/replizz-dashboard.png",
+              "/projects/g1.png",
+              "/projects/g2.png",
+              "/projects/g3.png"
+            ]}
+            title="GadgateShop"
+            description="A modern Next.js e-commerce platform designed with clean UI and smooth UX."
+            features={[
+              "Fully responsive pages",
+              "Product filtering",
+              "Modern dashboard layout",
+              "Fast UI performance"
+            ]}
+            links={{
+              live: "https://next-js-project-sigma-gilt.vercel.app/",
+              client: "https://github.com/armamunsyl/Next-JS-Project"
+            }}
+          />
+        </div>
+
+        <div className="snap-center flex-shrink-0 w-full md:w-auto">
+          <GlassProjectCard
+            images={[
               "/projects/replizz-login.png",
+              "/projects/replizz-dashboard.png",
               "/projects/replizz-flow.png"
             ]}
             title="Replizz Automation"
-            description="A smart Facebook Messenger automation platform powered by n8n workflows."
+            description="A smart Facebook Messenger automation tool powered by n8n workflows."
             features={[
               "Messenger automation",
               "Webhook execution",
               "Admin dashboard",
-              "Real-time logs"
+              "Real-time logs & insights"
             ]}
+            links={{
+              live: "https://replizz-demo.vercel.app/",
+              client: "https://github.com/armamunsyl/replizz-client",
+              server: "https://github.com/armamunsyl/replizz-server"
+            }}
           />
         </div>
 

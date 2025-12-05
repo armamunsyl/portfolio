@@ -2,7 +2,6 @@ export default function Footer() {
   return (
     <footer className="relative mt-40">
 
-      {/* AVATAR */}
       <div className="absolute -top-39 left-1/2 -translate-x-1/2 z-20">
         <img
           src="/avatars/developer.png"
@@ -11,7 +10,6 @@ export default function Footer() {
         />
       </div>
 
-      {/* FOOTER BODY */}
       <div
         className="
           w-full
