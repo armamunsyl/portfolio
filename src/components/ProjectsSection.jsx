@@ -1,8 +1,9 @@
 import GlassProjectCard from "./GlassProjectCard";
+import MotionSection from "./MotionSection";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 px-4 md:px-6">
+    <MotionSection id="projects" className="py-20 px-4 md:px-6" delay={0.15}>
 
       <h1 className="text-4xl text-white font-bold mb-10 text-center">
         Featured <span className="text-pink-500">Projects</span>
@@ -68,6 +69,6 @@ export default function ProjectsSection() {
         
 
       </div>
-    </section>
+    </MotionSection>
   );
 }

@@ -1,9 +1,11 @@
 import Image from 'next/image'
+import MotionSection from './MotionSection'
 export default function AboutSection() {
     return (
-        <section
+        <MotionSection
             id="about"
             className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 px-6 py-20 relative"
+            delay={0.1}
         >
             <div className="relative">
                 <Image
@@ -40,6 +42,6 @@ export default function AboutSection() {
                     performance, aesthetics, and functionality.
                 </p>
             </div>
-        </section>
+        </MotionSection>
     );
 }

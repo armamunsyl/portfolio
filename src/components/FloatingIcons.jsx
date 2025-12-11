@@ -1,8 +1,46 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 export default function FloatingIcons() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray(".floating-icon").forEach((icon, index) => {
+        gsap.fromTo(
+          icon,
+          { opacity: 0, y: -12, scale: 0.95 },
+          {
+            opacity: 0.45,
+            y: 0,
+            scale: 1,
+            duration: 1,
+            delay: index * 0.12,
+            ease: "power2.out",
+          }
+        );
+
+        gsap.to(icon, {
+          y: "+=12",
+          duration: 4 + index * 0.15,
+          yoyo: true,
+          repeat: -1,
+          ease: "sine.inOut",
+          delay: index * 0.25,
+        });
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+    <div
+      ref={containerRef}
+      className="pointer-events-none absolute inset-0 overflow-hidden"
+    >
       
       <Image
         src="/icons/code.png"

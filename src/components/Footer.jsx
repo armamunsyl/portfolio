@@ -1,11 +1,16 @@
+import Image from "next/image";
+import MotionSection from "./MotionSection";
+
 export default function Footer() {
   return (
-    <footer className="relative mt-40">
+    <MotionSection as="footer" className="relative mt-40">
 
       <div className="absolute -top-39 left-1/2 -translate-x-1/2 z-20">
-        <img
+        <Image
           src="/avatars/developer.png"
           alt="Developer Avatar"
+          width={180}
+          height={180}
           className="w-[180px] h-auto object-contain drop-shadow-2xl"
         />
       </div>
@@ -52,6 +57,6 @@ export default function Footer() {
           © 2025 Abdur Rahman Mamun — All Rights Reserved.
         </p>
       </div>
-    </footer>
+    </MotionSection>
   );
 }

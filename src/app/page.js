@@ -5,11 +5,16 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import SkillsSection from "@/components/SkillsSection";
 import TechScroller from "@/components/TechScroller";
+import MotionSection from "@/components/MotionSection";
 
 export default function Home() {
   return (
     <>
-      <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative">
+      <MotionSection
+        as="section"
+        id="home"
+        className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative"
+      >
 
         <StarsBackground />
 
@@ -32,7 +37,7 @@ export default function Home() {
         >
           View Projects
         </a>
-      </section>
+      </MotionSection>
 
       <AboutSection />
       

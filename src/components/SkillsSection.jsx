@@ -1,8 +1,8 @@
-"use client";
+import MotionSection from "./MotionSection";
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-24 px-6 md:px-12 lg:px-20">
+    <MotionSection id="skills" className="py-24 px-6 md:px-12 lg:px-20">
       <h2 className="text-4xl font-bold text-center mb-4">
         Skills & <span className="text-pink-500">Expertise</span>
       </h2>
@@ -59,6 +59,6 @@ export default function SkillsSection() {
         </div>
 
       </div>
-    </section>
+    </MotionSection>
   );
 }

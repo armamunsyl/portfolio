@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import MotionSection from "./MotionSection";
 
 export default function GlassProjectCard({
   images,
@@ -21,27 +22,14 @@ export default function GlassProjectCard({
   }, [images.length]);
 
   return (
-    <div
-      className="
-        w-[92%] max-w-[1050px] mx-auto
-        rounded-[40px]
-        bg-gradient-to-br from-[#ff2ea620] to-[#6b00ff35]
-        backdrop-blur-xl border border-white/15
-        shadow-[0_8px_30px_rgba(0,0,0,0.35)]
-        overflow-hidden
-        flex flex-col md:flex-row
-        p-5 md:p-8 gap-6 md:gap-4
-        md:h-[360px]
-      "
+    <MotionSection
+      as="div"
+      className="w-[92%] max-w-[1050px] mx-auto rounded-[40px] bg-gradient-to-br from-[#ff2ea620] to-[#6b00ff35] backdrop-blur-xl border border-white/15 shadow-[0_8px_30px_rgba(0,0,0,0.35)] overflow-hidden flex flex-col md:flex-row p-5 md:p-8 gap-6 md:gap-4 md:h-[360px]"
+      delay={0.2}
     >
       {/* LEFT — IMAGE SLIDER */}
       <div
-        className="
-          w-full md:w-[45%]
-          h-[220px] md:h-full
-          rounded-[28px]
-          bg-black/10 overflow-hidden relative
-        "
+        className="w-full md:w-[45%] h-[220px] md:h-full rounded-[28px] bg-black/10 overflow-hidden relative"
       >
         <div
           className="flex h-full transition-transform duration-[900ms] ease-out"
@@ -89,12 +77,7 @@ export default function GlassProjectCard({
             <a
               href={links.live}
               target="_blank"
-              className="
-                px-4 py-2 rounded-full text-sm
-                bg-white/20 hover:bg-white/30
-                border border-white/20
-                backdrop-blur-md transition
-              "
+              className="px-4 py-2 rounded-full text-sm bg-white/20 hover:bg-white/30 border border-white/20 backdrop-blur-md transition"
             >
               Live Demo
             </a>
@@ -104,10 +87,7 @@ export default function GlassProjectCard({
             <a
               href={links.client}
               target="_blank"
-              className="
-                px-4 py-2 rounded-full text-sm
-                bg-blue-500 hover:bg-blue-600 text-white transition
-              "
+              className="px-4 py-2 rounded-full text-sm bg-blue-500 hover:bg-blue-600 text-white transition"
             >
               Client Code
             </a>
@@ -117,16 +97,13 @@ export default function GlassProjectCard({
             <a
               href={links.server}
               target="_blank"
-              className="
-                px-4 py-2 rounded-full text-sm
-                bg-purple-600 hover:bg-purple-700 text-white transition
-              "
+              className="px-4 py-2 rounded-full text-sm bg-purple-600 hover:bg-purple-700 text-white transition"
             >
               Server Code
             </a>
           )}
         </div>
       </div>
-    </div>
+    </MotionSection>
   );
 }

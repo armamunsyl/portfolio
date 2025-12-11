@@ -9,6 +9,9 @@ html, body {
   background-color: #000 !important;
   color: white !important;
   forced-color-adjust: none;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 @theme inline {
   --color-background: var(--background);
@@ -202,3 +205,52 @@ body {
   animation: scroll 18s linear infinite;
 }
 
+.motion-fade,
+.motion-fade-up,
+.motion-scale {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.motion-fade {
+  animation: motionFade 0.8s ease forwards;
+}
+
+.motion-fade-up {
+  transform: translateY(24px);
+  animation: motionFadeUp 0.9s ease forwards;
+}
+
+.motion-scale {
+  transform: scale(0.96);
+  animation: motionScale 0.9s ease forwards;
+}
+
+.motion-delay-1 { animation-delay: 0.15s; }
+.motion-delay-2 { animation-delay: 0.3s; }
+.motion-delay-3 { animation-delay: 0.45s; }
+
+@keyframes motionFade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes motionFadeUp {
+  0% { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes motionScale {
+  0% { opacity: 0; transform: scale(0.96); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-fade,
+  .motion-fade-up,
+  .motion-scale {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}

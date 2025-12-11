@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import MotionSection from "./MotionSection";
 
 export default function TechScroller() {
   const techLogos = [
@@ -15,7 +16,7 @@ export default function TechScroller() {
   ];
 
   return (
-    <div className="w-full overflow-hidden py-10">
+    <MotionSection as="div" className="w-full overflow-hidden py-10" delay={0.1}>
       <style>{`
         .scroll-track {
           display: flex;
@@ -44,6 +45,6 @@ export default function TechScroller() {
           </div>
         ))}
       </div>
-    </div>
+    </MotionSection>
   );
 }

@@ -1,9 +1,15 @@
 "use client";
 import Image from "next/image";
+import MotionSection from "./MotionSection";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="relative py-20 px-6 mt-40">
+    <MotionSection
+      as="section"
+      id="contact"
+      className="relative py-20 px-6 mt-40"
+      delay={0.2}
+    >
     
       <div className="absolute -top-16 left-2/7 -translate-x-1/2 z-20">
         <Image
@@ -82,6 +88,6 @@ export default function ContactSection() {
 
         </div>
       </div>
-    </section>
+    </MotionSection>
   );
 }
