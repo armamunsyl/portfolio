@@ -254,3 +254,32 @@ body {
     transform: none;
   }
 }
+
+.mouse-trail-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+}
+
+.mouse-icon-trail {
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
+  transform: translate(-50%, -50%);
+  will-change: transform, opacity;
+}
+
+@media (pointer: coarse) {
+  .mouse-trail-layer {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mouse-trail-layer {
+    display: none;
+  }
+}

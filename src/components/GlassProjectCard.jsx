@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import MotionSection from "./MotionSection";
+import { motion } from "framer-motion";
 
 export default function GlassProjectCard({
   images,
@@ -22,10 +22,12 @@ export default function GlassProjectCard({
   }, [images.length]);
 
   return (
-    <MotionSection
-      as="div"
+    <motion.div
       className="w-[92%] max-w-[1050px] mx-auto rounded-[40px] bg-gradient-to-br from-[#ff2ea620] to-[#6b00ff35] backdrop-blur-xl border border-white/15 shadow-[0_8px_30px_rgba(0,0,0,0.35)] overflow-hidden flex flex-col md:flex-row p-5 md:p-8 gap-6 md:gap-4 md:h-[360px]"
-      delay={0.2}
+      initial={{ opacity: 1, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {/* LEFT — IMAGE SLIDER */}
       <div
@@ -104,6 +106,6 @@ export default function GlassProjectCard({
           )}
         </div>
       </div>
-    </MotionSection>
+    </motion.div>
   );
 }

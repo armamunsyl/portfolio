@@ -14,12 +14,38 @@ export default function ProjectsSection() {
         flex flex-col
         md:flex-row
         md:overflow-x-auto
+        overflow-y-hidden
         gap-6
         lg:gap-4
         snap-y md:snap-x snap-mandatory
         no-scrollbar
         "
       >
+
+        <div className="snap-center flex-shrink-0 w-full md:w-auto">
+          <GlassProjectCard
+            images={[
+              "/newimg1.png",
+              "/newimg2.png",
+              "/newimg3.png"
+            ]}
+            title="ScholarStream"
+            description="A scholarship discovery and management platform that helps students find, filter, and apply for global scholarships with ease."
+            features={[
+              "Fully responsive, recruiter-friendly UI",
+              "Server-side search, filter, and sorting",
+              "Scholarship categories (Full Fund, Partial Fund)",
+              "Secure authentication and role-based access",
+              "Application tracking and user dashboard",
+              "Modern REST API with scalable backend"
+            ]}
+            links={{
+              live: "https://scholarshipbd.vercel.app/",
+              client: "https://github.com/armamunsyl/ScholarStream-Client",
+              server: "https://github.com/armamunsyl/ScholarStream-Server"
+            }}
+          />
+        </div>
 
         <div className="snap-center flex-shrink-0 w-full md:w-auto">
           <GlassProjectCard
